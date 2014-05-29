@@ -31,9 +31,9 @@ fi
 # Check if Linuxbrew is installed, if not then install
 which brew | grep 'linuxbrew' &> /dev/null
 if [ $? -eq 0 ]; then
-    echo "OK, Linuxbrew already installed"
+    echo "OK, Linuxbrew is already installed"
 else
-    echo "FAIL, Linuxbrew not installed"
+    echo "FAIL, Linuxbrew has not been installed"
     installLinuxbrew
 fi
 # First make sure to update Linuxbrew
@@ -41,31 +41,20 @@ brew update
 # Add taps from custom repository and homebrew repositories
 brew tap nogalesc/ASGARD
 brew tap homebrew/science
-
 # Install required software using Linuxbrew
 brew install zeromq 	    # ZMQ 4.0.4
 brew install eigen  	    # Eigen 3.2.1
-brew install orocos-kdl     # KDL 1.2.2     #lil buggy: homebrew/science
-brew install gtsam          # GTSam 2.3.0   #lil buggy: homebrew/science
+brew install orocos-kdl     # KDL 1.2.2     
+brew install gtsam          # GTSam 2.3.0 
 #brew install opencv 	    # OpenCV 2.4.7  #lil buggy: homebrew/science
 #brew install gazebomodels                  #Custom formula
 #brew install urg           # URG 1.1.2     #Custom formula
 
-# To add certain formula?
-# brew install  https://github.com/nogalesc/homebrew-ASGARD/urg.rb
-
-
-# Installations from homebrew
-# brew install OpenCV
 
 #---------------------------#
 
 ##To do: 
 #        Test on different systems. 
-#        Make sure that taps are correctly set up
+#        I should really check the newest .bashrc edit
 # 	 Install debs, install debs stuff, set up PointGrey pckgs in server
 
-
-#       Is this correct?
-#export PATH="$HOME/.linuxbrew/bin:$PATH"
-#export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
