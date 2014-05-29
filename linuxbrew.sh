@@ -38,13 +38,34 @@ else
 fi
 # First make sure to update Linuxbrew
 brew update
-# Add taps from custom repository
-brew install https://github.com/nogalesc/homebrew-ASGARD
+# Add taps from custom repository and homebrew repositories
+brew tap nogalesc/ASGARD
+brew tap homebrew/science
+
+# Install required software using Linuxbrew
+brew install zeromq 	    # ZMQ 4.0.4
+brew install eigen  	    # Eigen 3.2.1
+brew install orocos-kdl     # KDL 1.2.2     #lil buggy: homebrew/science
+brew install gtsam          # GTSam 2.3.0   #lil buggy: homebrew/science
+#brew install opencv 	    # OpenCV 2.4.7  #lil buggy: homebrew/science
+#brew install gazebomodels                  #Custom formula
+#brew install urg           # URG 1.1.2     #Custom formula
+
+# To add certain formula?
+# brew install  https://github.com/nogalesc/homebrew-ASGARD/urg.rb
 
 
+# Installations from homebrew
+# brew install OpenCV
+
+#---------------------------#
 
 ##To do: 
 #        Test on different systems. 
 #        Make sure that taps are correctly set up
-# 	 Install debs, install debs stuff
+# 	 Install debs, install debs stuff, set up PointGrey pckgs in server
 
+
+#       Is this correct?
+#export PATH="$HOME/.linuxbrew/bin:$PATH"
+#export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
