@@ -1,2 +1,2 @@
 # FUN
-Random things I write
+Random things I write for reference and fun.
