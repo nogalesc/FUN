@@ -1,0 +1,34 @@
+#ignore standard build files
+
+*.o
+*.a
+*.so
+*.dylib
+*~
+*.mexmaci64
+*.mexa64
+.DS_Store
+*.swp
+.waf*
+.lock-waf_linux2_build
+*.ssv
+*.csv
+*.tiff
+*.mat
+Operator/Makefile
+perf.data
+
+# Other ignored files
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Makefile
+cmake_install.cmake
+install_manifest.txt
+*.cmake
+CMakeCache.txt
+!*.c
+!Makefile
+
+# Ignore the executable
+kalmanfilteropencv
