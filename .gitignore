@@ -1,5 +1,5 @@
 #ignore standard build files
-
+build
 *.o
 *.a
 *.so
