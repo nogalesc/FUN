@@ -10,7 +10,9 @@ int main()
 	int str_ll = my_phrase.size();
 	std::cout << my_phrase << " is " << str_ll 
 	          << " characters long" << std::endl;
-	//A string is an array of characters. Iterate through the phrase.
+	//Iterate through the phrase.
+	//length() or size() function is important here because C++ strings are not 
+        //guaranteed to be null-terminated (by a '\0').
 	for(int ii = 0; ii<str_ll; ++ii)
 	{
 		std::cout << my_phrase[ii] << std::endl;
