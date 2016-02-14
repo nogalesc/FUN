@@ -32,3 +32,11 @@ CMakeCache.txt
 
 # Ignore the executable
 kalmanfilteropencv
+
+# Ignore Eclipse related files
+.metadata
+RemoteSystemsTempFiles/
+.cproject
+.project
+Makefile
+eclipse_remove_duplicates
